@@ -1,14 +1,18 @@
 /*
   Write your explanation here as a comment.
   For example, you might say...
-    -This function has [insert time complexity], because [some line of code] means [something describing the nature of the implementation]
+    -This function has [insert time complexity], because 
+    [some line of code] means 
+    [something describing the nature of the implementation]
 */
 
 
-// Problem 1: Retrieval of a value from a hash table using the following function with regard to the size of the hash table. knowing that the key never get very large
+// Problem 1: Retrieval of a value from a hash table using the following 
+//function with regard to the size of the hash table.
+//knowing that the key never get very large
 
 /*
- Complexity:
+ Complexity:n ,becuase for loop which repeat over all elements
  */
 
 var retrieve = function(key) {
@@ -20,10 +24,11 @@ var retrieve = function(key) {
 };
 
 
-// Problem 2: sortedArrayContainsItem with regard to the length of the passed-in array
+// Problem 2: sortedArrayContainsItem with regard to the length of 
+//the passed-in array
 
 /*
- Complexity:
+ Complexity:constant , becuase the function deal with one value
  */
 
 
@@ -40,7 +45,7 @@ var sortedArrayContainsItem = function(array, item) {
 // Problem 3: hasDuplicates with regard to the length of the passed in array
 
 /*
- Complexity:
+ Complexity:n , becuase the function deal with all elemens in array with for loop
  */
 
 var hasDuplicates = function(array) {
