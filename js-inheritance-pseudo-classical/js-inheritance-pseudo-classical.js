@@ -45,13 +45,22 @@ var Phone = function(phoneNumber) {
   Phone.prototype.send = function(recipientPhoneNumber, message) {
         return 'sending the message "' + message + '" to the phone number ' + recipientPhoneNumber + ' from ' + this.phoneNumber;
  
-  }
+  };
 
 var SmartPhone = function(phoneNumber, email)  {
   this.email = email
-  SmartPhone.prototype.phone = Object.create(Phone.prototype) 
-
+  Phone.call(this,phoneNumber)
 }
+  SmartPhone.prototype = Object.create(Phone.prototype) ;
+  SmartPhone.prototype.costructor= SmartPhone ;
+   SmartPhone.prototype.send = function(recipientPhoneNumberOrEmail, message) {
+         if (typeof recipientPhoneNumberOrEmail === 'number') {
+        Phone.prototype.send.call(this, recipientPhoneNumberOrEmail, message);
+         }else{
+      return 'sending the message "' + message + '" to email ' + recipientPhoneNumberOrEmail + ' from ' + this.email;
+                 
+    }
+   }
 
 
 
